@@ -6,6 +6,15 @@ media_folder: "src/assets/images"
 public_folder: "/assets/images"
 
 collections:
+  - name: "rsvp"
+    label: "RSVP Redirect"
+    files:
+      - name: "rsvp"
+        label: "azmass.org/rsvp Target"
+        file: "src/_data/rsvp.json"
+        fields:
+          - { label: "Eventbrite (or other registration) URL", name: "url", widget: "string", hint: "Whatever azmass.org/rsvp should redirect to right now — update this whenever the current event changes." }
+
   - name: "events"
     label: "Events"
     folder: "src/events"
