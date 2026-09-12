@@ -1,0 +1,33 @@
+{
+  "heading": "Rich Culture & Ancient Traditions",
+  "intro": "Azerbaijan, known as the \"Land of Fire,\" boasts a rich cultural heritage spanning thousands of years — a unique blend of Eastern and Western influences.",
+  "items": [
+    {
+      "title": "Mugham Music",
+      "body": "A UNESCO-recognized art form — highly complex improvised vocal and instrumental music rooted in centuries of tradition.",
+      "image": "/assets/images/culture-mugham.jpeg",
+      "imageAlt": "Folk performers, Xarıbülbül music festival, Shusha"
+    },
+    {
+      "title": "Azerbaijani Cuisine",
+      "body": "From aromatic plov to delicate dolma and sweet baklava — flavors reflecting the rich tapestry of the Caucasus.",
+      "image": "/assets/images/culture-cuisine.jpg",
+      "imageAlt": "Dolma and cheese on a traditional Azerbaijani carpet spread"
+    },
+    {
+      "title": "Carpet Weaving",
+      "body": "World-renowned for intricate patterns and vibrant colors, each region carrying its own distinctive style.",
+      "image": "/assets/images/culture-carpet.jpg",
+      "imageAlt": "A weaver at the loom, Guba"
+    },
+    {
+      "title": "Şəbəkə Art",
+      "body": "Hand-cut colored glass assembled into carved wooden lattices, held together entirely without nails or glue.",
+      "image": "/assets/images/culture-shebeke.jpeg",
+      "imageAlt": "Şəbəkə craft workshop, Şəki"
+    }
+  ],
+  "imageCredit": "Photos courtesy of Azerbaijan Tourism Board (azerbaijan.travel)",
+  "fireStripTitle": "🔥 Land of Fire",
+  "fireStripSubtitle": "\"Odlar Yurdu\" — where ancient flames meet modern spirit"
+}

@@ -1,0 +1,88 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "events"
+    label: "Events"
+    folder: "src/events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD", required: false, hint: "Used for sorting events soonest-first. Leave blank if the date is still TBA — it'll sort to the end." }
+      - { label: "Display Date", name: "display_date", widget: "string", hint: "Exactly what visitors see, e.g. \"May 9, 2026 · 2:00 PM\" or \"Date TBA · 2:00 PM\"." }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Tag Label", name: "tagLabel", widget: "string", hint: "Small badge text, e.g. \"Featured Event\", \"Coming Soon\", or a date like \"May 27\"." }
+      - label: "Tag Style"
+        name: "tagStyle"
+        widget: "select"
+        options: [{ label: "Green (confirmed/live)", value: "live" }, { label: "Dark (coming soon)", value: "soon" }]
+      - { label: "Description", name: "body", widget: "markdown" }
+
+  - name: "hero"
+    label: "Homepage Hero"
+    files:
+      - name: "hero"
+        label: "Hero Photo & Text"
+        file: "src/_data/hero.json"
+        fields:
+          - { label: "Tagline", name: "tagline", widget: "text" }
+          - { label: "Background photo", name: "image", widget: "image" }
+          - { label: "Photo alt text", name: "imageAlt", widget: "string" }
+          - { label: "Photo credit", name: "imageCredit", widget: "string" }
+
+  - name: "about"
+    label: "About Section"
+    files:
+      - name: "about"
+        label: "About Section Content"
+        file: "src/_data/about.json"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Lead paragraph", name: "lead", widget: "text" }
+          - label: "Pillars (4 cards)"
+            name: "pillars"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - label: "Color"
+                name: "color"
+                widget: "select"
+                options: [{ label: "Default", value: "" }, { label: "Blue", value: "blue" }, { label: "Red", value: "red" }]
+
+  - name: "culture"
+    label: "Culture Section"
+    files:
+      - name: "culture"
+        label: "Culture Section Content"
+        file: "src/_data/culture.json"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Intro paragraph", name: "intro", widget: "text" }
+          - label: "Culture Cards"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Photo alt text", name: "imageAlt", widget: "string" }
+          - { label: "Photo credit line", name: "imageCredit", widget: "string" }
+          - { label: "\"Land of Fire\" strip title", name: "fireStripTitle", widget: "string" }
+          - { label: "\"Land of Fire\" strip subtitle", name: "fireStripSubtitle", widget: "string" }
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "settings"
+        label: "Organization Info"
+        file: "src/_data/settings.json"
+        fields:
+          - { label: "Organization name", name: "orgName", widget: "string" }
+          - { label: "Short name", name: "shortName", widget: "string" }
+          - { label: "Facebook URL", name: "facebookUrl", widget: "string" }

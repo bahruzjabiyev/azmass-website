@@ -1,0 +1,111 @@
+---
+title: Azerbaijani Community of Massachusetts
+layout: base.njk
+permalink: /index.html
+---
+<div class="hero">
+  <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}">
+  <div class="scrim"></div>
+  <div class="hero-content">
+    <div class="flag-bar"><span class="b"></span><span class="r"></span><span class="g"></span></div>
+    <h1>{{ settings.orgName }}</h1>
+    <p>{{ hero.tagline }}</p>
+    <div class="hero-cta">
+      <a class="btn btn-solid" href="#about">About Us</a>
+      <a class="btn btn-outline" href="#events">Upcoming Events</a>
+    </div>
+    <p class="credit">{{ hero.imageCredit }}</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <section id="about">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">About Us</p>
+        <h2>{{ about.heading }}</h2>
+      </div>
+    </div>
+    <p class="about-lead">{{ about.lead }}</p>
+    <div class="pillars">
+      {% for p in about.pillars %}
+      <div class="pillar {{ p.color }}">
+        <p class="n">0{{ loop.index }}</p>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section id="events">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Events</p>
+        <h2>Upcoming Community Events</h2>
+      </div>
+      <p>From traditional celebrations to educational seminars, there's always something happening in our community.</p>
+    </div>
+    <div class="events">
+      {% for e in collections.events %}
+      <div class="event">
+        <span class="tag {{ e.data.tagStyle }}">{{ e.data.tagLabel }}</span>
+        <h3>{{ e.data.title }}</h3>
+        <div class="desc">{{ e.templateContent | safe }}</div>
+        <div class="meta">
+          <div>{{ e.data.display_date }}</div>
+          <div>{{ e.data.location }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section id="culture">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Our Heritage</p>
+        <h2>{{ culture.heading }}</h2>
+      </div>
+      <p>{{ culture.intro }}</p>
+    </div>
+    <div class="culture-grid">
+      {% for item in culture.items %}
+      <div class="culture-item">
+        <div class="photo"><img src="{{ item.image }}" alt="{{ item.imageAlt }}"></div>
+        <div class="body">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.body }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="credit">{{ culture.imageCredit }}</p>
+    <div class="fire-strip">
+      <b>{{ culture.fireStripTitle }}</b>
+      <span>{{ culture.fireStripSubtitle }}</span>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section id="contact">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Get in Touch</p>
+        <h2>Contact Us</h2>
+      </div>
+      <p>Have questions or want to get involved? We'd love to hear from you.</p>
+    </div>
+    <div class="contact-info">
+      <dl>
+        <dt>Follow Us</dt>
+        <dd><a href="{{ settings.facebookUrl }}" target="_blank" rel="noopener">Facebook</a></dd>
+      </dl>
+    </div>
+  </section>
+</div>

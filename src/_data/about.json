@@ -1,0 +1,26 @@
+{
+  "heading": "Uniting Our Community, Investing in the Next Generation",
+  "lead": "The Azerbaijani Community of Massachusetts brings together Azerbaijani families across the state to preserve our national and cultural values, pass them on to the next generation, and support the academic and professional growth of our youth.",
+  "pillars": [
+    {
+      "title": "Community & Unity",
+      "body": "Bringing Azerbaijani families in Massachusetts together through regular gatherings, holiday celebrations, and shared spaces where our community can grow stronger.",
+      "color": ""
+    },
+    {
+      "title": "Cultural Heritage",
+      "body": "Keeping our traditions, language, and national holidays alive and passing them on to our children so the next generation grows up rooted in who we are.",
+      "color": "blue"
+    },
+    {
+      "title": "Seminars & Knowledge",
+      "body": "Hosting educational seminars and intellectual gatherings on topics our community cares about — health, education, professional life — bringing experts from across Massachusetts to share knowledge.",
+      "color": ""
+    },
+    {
+      "title": "Youth Development",
+      "body": "Supporting the academic journey and professional growth of Azerbaijani-American youth through mentorship, university and career guidance, and connections with community members.",
+      "color": "red"
+    }
+  ]
+}
