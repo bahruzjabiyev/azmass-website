@@ -85,10 +85,6 @@ permalink: /index.html
       {% endfor %}
     </div>
     <p class="credit">{{ culture.imageCredit }}</p>
-    <div class="fire-strip">
-      <b>{{ culture.fireStripTitle }}</b>
-      <span>{{ culture.fireStripSubtitle }}</span>
-    </div>
   </section>
 </div>
 
@@ -101,11 +97,21 @@ permalink: /index.html
       </div>
       <p>Have questions or want to get involved? We'd love to hear from you.</p>
     </div>
-    <div class="contact-info">
-      <dl>
-        <dt>Follow Us</dt>
-        <dd><a href="{{ settings.facebookUrl }}" target="_blank" rel="noopener">Facebook</a></dd>
-      </dl>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <dl>
+          <dt>Follow Us</dt>
+          <dd><a href="{{ settings.facebookUrl }}" target="_blank" rel="noopener">Facebook</a></dd>
+        </dl>
+      </div>
+      <form class="contact-form" name="contact" method="POST" action="https://azmass.netlify.app/thank-you/" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hp-field"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        <button class="btn btn-ink" type="submit">Send Message</button>
+      </form>
     </div>
   </section>
 </div>

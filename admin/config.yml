@@ -73,8 +73,6 @@ collections:
               - { label: "Photo", name: "image", widget: "image" }
               - { label: "Photo alt text", name: "imageAlt", widget: "string" }
           - { label: "Photo credit line", name: "imageCredit", widget: "string" }
-          - { label: "\"Land of Fire\" strip title", name: "fireStripTitle", widget: "string" }
-          - { label: "\"Land of Fire\" strip subtitle", name: "fireStripSubtitle", widget: "string" }
 
   - name: "settings"
     label: "Site Settings"
